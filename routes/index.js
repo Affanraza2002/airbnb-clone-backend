@@ -6,11 +6,11 @@ const multer = require('multer');
 // multer
 const  upload = multer({ dest: '/tmp' });
 
-router.get('/', (req, res) => {
-  res.status(200).json({
-    greeting: 'Hello from airbnb-clone api',
-  });
-});
+// router.get('/', (req, res) => {
+//   res.status(200).json({
+//     greeting: 'Hello from airbnb-clone api',
+//   });
+// });
 
 // upload photo using image url
 router.post('/upload-by-link', async (req, res) => {
