@@ -21,7 +21,6 @@ const app = express();
 
 // For handling cookies
 app.use(cookieParser())
-app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));
 
 // Initialize cookie-session middleware
 app.use(cookieSession({
@@ -34,7 +33,7 @@ app.use(cookieSession({
 }))
 
 // middleware to handle json
-app.use(express.json());
+app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));
 
 // CORS
 app.use(cors({
