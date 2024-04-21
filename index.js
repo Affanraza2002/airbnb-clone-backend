@@ -2,7 +2,7 @@
 const dotenv = require("dotenv").config();
 const express = require('express');
 const cors = require('cors');
-// const connectWithDB = require('./config/db');
+const connectWithDB = require('./config/db');
 // const cookieSession = require('cookie-session')
 const cookieParser = require('cookie-parser')
 // const cloudinary = require('cloudinary').v2;
@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 4000;
 // const allRoutes = require('./routes')
 
 // // connect with database
-// connectWithDB();
+connectWithDB();
 
 // // cloudinary configuration          
 // cloudinary.config({
