@@ -21,6 +21,7 @@ const app = express();
 
 // For handling cookies
 app.use(cookieParser())
+app.use(bodyParser.json()); app.use(bodyParser.urlencoded({ extended: true }));
 
 // Initialize cookie-session middleware
 app.use(cookieSession({
@@ -43,7 +44,6 @@ app.use(cors({
 }));
 
 // use express router
-app.get("/", (req, res) => res.send("Express on Vercel"));
 app.use('/', require('./routes'));
 
 app.listen(process.env.PORT || 8000, (err) => {
