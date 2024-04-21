@@ -48,7 +48,11 @@ app.use(cors({
 }));
 
 // use express router
-app.use('/', allRoutes);
+// app.use('/', allRoutes);
+
+app.use('/', (req, res) =>{
+    res.send('Hello from server side');
+});
 
 app.listen(process.env.PORT || 8000, (err) => {
   if (err) {
