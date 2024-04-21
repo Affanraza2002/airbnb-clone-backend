@@ -7,6 +7,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser')
 // const cloudinary = require('cloudinary').v2;
 const bodyParser = require("body-parser");
+const PORT = process.env.PORT || 4000;
 // const allRoutes = require('./routes')
 
 // // connect with database
