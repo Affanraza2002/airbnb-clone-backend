@@ -41,11 +41,11 @@ app.use(cookieParser());
 
 
 // CORS
-app.use(cors({
-  origin: process.env.CLIENT_URL,
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-  credentials: true,
-}));
+// app.use(cors({
+//   origin: process.env.CLIENT_URL,
+//   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+//   credentials: true,
+// }));
 
 // use express router
 // app.use('/', allRoutes);
