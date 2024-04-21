@@ -1,13 +1,13 @@
-const config = require('./config')
+// const config = require('./config')
 const dotenv = require("dotenv").config();
 const express = require('express');
-const cors = require('cors');
-const connectWithDB = require('./config/db');
-const cookieSession = require('cookie-session')
+// const cors = require('cors');
+// const connectWithDB = require('./config/db');
+// const cookieSession = require('cookie-session')
 const cookieParser = require('cookie-parser')
-const cloudinary = require('cloudinary').v2;
+// const cloudinary = require('cloudinary').v2;
 const bodyParser = require("body-parser");
-const allRoutes = require('./routes')
+// const allRoutes = require('./routes')
 
 // // connect with database
 // connectWithDB();
@@ -59,7 +59,7 @@ app.listen(PORT, () => {
   console.log(`Server is running at PORT ${PORT}`);
 });
 
-module.exports = app;
+// module.exports = app;
 
 
 
