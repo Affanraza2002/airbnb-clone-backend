@@ -5,7 +5,7 @@ const cors = require('cors');
 const connectWithDB = require('./config/db');
 // const cookieSession = require('cookie-session')
 const cookieParser = require('cookie-parser')
-// const cloudinary = require('cloudinary').v2;
+const cloudinary = require('cloudinary').v2;
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 4000;
 // const allRoutes = require('./routes')
@@ -13,12 +13,12 @@ const PORT = process.env.PORT || 4000;
 // // connect with database
 connectWithDB();
 
-// // cloudinary configuration          
-// cloudinary.config({
-//   cloud_name: process.env.CLOUD_NAME,
-//   api_key: process.env.API_KEY,
-//   api_secret: process.env.API_SECRET
-// });
+// cloudinary configuration          
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET
+});
 
 const app = express();
 
