@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser')
 const cloudinary = require('cloudinary').v2;
 const bodyParser = require("body-parser");
 const PORT = process.env.PORT || 4000;
-// const allRoutes = require('./routes')
+const allRoutes = require('./routes')
 
 // // connect with database
 connectWithDB();
@@ -49,9 +49,9 @@ app.use(cors({
 }));
 
 // use express router
-// app.use('/', allRoutes);
+app.use('/', allRoutes);
 
-app.use('/', (req, res) =>{
+app.use('/hello', (req, res) =>{
     res.send('Hello from server side');
 });
 
